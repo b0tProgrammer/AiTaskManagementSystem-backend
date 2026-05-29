@@ -1,6 +1,3 @@
-Here is the clean, comment-free `Dockerfile` ready to be copied and pasted into your project:
-
-```dockerfile
 FROM eclipse-temurin:25-jdk AS build
 
 RUN apt-get update && apt-get install -y maven
@@ -23,5 +20,3 @@ EXPOSE 8080
 COPY --from=build /app/target/*.jar app.jar
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
-
-```
